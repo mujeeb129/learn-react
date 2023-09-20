@@ -1,6 +1,42 @@
 import { useState } from "react";
 import "./styles.css";
 
+// push - user to append element to arrray
+let dummyArray = ["Sports", "Cooking", "Reading"];
+dummyArray.push(["Exercise", "done"]);
+console.log(dummyArray);
+
+// length - return length of array
+console.log(dummyArray.length);
+
+// findIndex - returns index of the item
+console.log(dummyArray.findIndex((item) =>  {
+  return item === 'Sports'
+}))
+
+// map - used to edit the elemets in the array as whole
+const editedDummyArray = dummyArray.map((item) => item + ' < ! >')
+console.log(editedDummyArray)
+
+// Destructuring
+const [firstName, lastName] = ['Mujeeb', 'Rahman']
+console.log(firstName)
+
+const {name : userName, age} = {
+  name : ' Mujeeb',
+  age: 12
+}
+
+console.log(userName)
+console.log(age)
+
+localStorage.setItem('id', userName)
+
+
+
+
+
+
 // This array is used to contents in the each tab
 const content = [
   [
@@ -22,12 +58,6 @@ const content = [
   ],
 ];
 
-// push - user to append element to arrray
-let dummyArray = ["Sports", "Cooking", "Reading"];
-dummyArray.push(["Exercise", "done"]);
-console.log(dummyArray);
-// length - return length of array
-console.log(dummyArray.length);
 
 export default function App() {
   const [activeContentIndex, setActiveContentIndex] = useState(0);
