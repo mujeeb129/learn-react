@@ -32,10 +32,27 @@ console.log(age)
 
 localStorage.setItem('id', userName)
 
+// Defining function
+function handleTimeout(){
+  console.log('Time out!!');
+};
 
+const handleTimeout2 = () => {
+  console.log('Time out!!');
+};
 
+// Passing return value of function
+//setTimeout(handleTimeout());
 
+// Passing a function
+// setTimeout function is used to run function after some time asynronously
+setTimeout(handleTimeout, 3000) 
 
+function greeter(greetFn){
+  greetFn();
+}
+
+greeter(() => console.log('Hey beauty'))
 
 // This array is used to contents in the each tab
 const content = [
